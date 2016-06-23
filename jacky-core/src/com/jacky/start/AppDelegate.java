@@ -10,10 +10,8 @@ import com.jacky.engine.viewnode.Camera2D;
 import com.jacky.engine.viewnode.GraphicsTool;
 import com.jacky.engine.viewnode.Node2D;
 import com.jacky.engine.viewnode.Scene;
-import com.meteor.gm.MainMenuScene;
 import com.meteor.gm.util.CommonAni;
 import com.meteor.gm.util.Const;
-import com.testgame.GameScene;
 
 /**
  * 只有在更新相机参数时传递新的相机矩阵到opengl，相机未发生变化时，不需要每一帧重新计算和传递相机矩阵
@@ -87,11 +85,16 @@ public class AppDelegate {
 	public static float design_high = 640;
 
 	public static int camera_len = 90;
+	
+	public Scene first;
 	public void init(){
 		camera2D = new Camera2D();
-		MainMenuScene testmain = new MainMenuScene();
-		GameScene gs = new GameScene();
-		replaceScene(gs);
+		//MainMenuScene testmain = new MainMenuScene();
+		//GameScene gs = new GameScene();
+		if(first==null){
+			System.out.println("请设置第一个场景！！");
+		}
+		replaceScene(first);
 	}
 	public void replaceScene(Scene scene){
 		if(currentScreen!=null){
