@@ -1,16 +1,19 @@
 ﻿package com.jacky.start;
 
-import com.cszombie.GameScene;
 import com.jacky.engine.local.LocalUtile;
 import com.jacky.engine.pay.CorePay;
 import com.jacky.engine.resource.LocalFile;
 import com.jacky.engine.savedata.UserPreferences;
 import com.jacky.engine.sound.SoundManger;
-import com.jacky.engine.viewnode.*;
-
-import com.meteor.gm.*;
+import com.jacky.engine.viewnode.Camera;
+import com.jacky.engine.viewnode.Camera2D;
+import com.jacky.engine.viewnode.GraphicsTool;
+import com.jacky.engine.viewnode.Node2D;
+import com.jacky.engine.viewnode.Scene;
+import com.meteor.gm.MainMenuScene;
 import com.meteor.gm.util.CommonAni;
 import com.meteor.gm.util.Const;
+import com.testgame.GameScene;
 
 /**
  * 只有在更新相机参数时传递新的相机矩阵到opengl，相机未发生变化时，不需要每一帧重新计算和传递相机矩阵
@@ -87,12 +90,8 @@ public class AppDelegate {
 	public void init(){
 		camera2D = new Camera2D();
 		MainMenuScene testmain = new MainMenuScene();
-		//TestScene s = new TestScene();
-		//GenGameShortScene ggss = new GenGameShortScene();
-		//GameScene gs = new GameScene();
-
-		SaicScene ss = new SaicScene();
-		replaceScene(ss);
+		GameScene gs = new GameScene();
+		replaceScene(gs);
 	}
 	public void replaceScene(Scene scene){
 		if(currentScreen!=null){
