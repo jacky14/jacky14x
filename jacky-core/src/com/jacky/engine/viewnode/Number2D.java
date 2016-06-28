@@ -1,4 +1,4 @@
-package com.jacky.engine.viewnode;
+ï»¿package com.jacky.engine.viewnode;
 
 import com.jacky.engine.TextureManger;
 import com.jacky.engine.buffer.BufferUtil;
@@ -15,7 +15,7 @@ public class Number2D extends Node2D{
         node_type =  NODE_TYPE_NUM;
     }
     public String numfile ;
-    public void setText(String numberfile,int length){//¸øµ±Ç°¶ÔÏóÉèÖÃ¶ÔÓ¦µÄÊı×ÖÎÆÀíÍ¼£¬ºÍÍ¼Æ¬ÖĞÎÄ×ÖµÄ³¤¶È
+    public void setText(String numberfile,int length){//ç»™å½“å‰å¯¹è±¡è®¾ç½®å¯¹åº”çš„æ•°å­—çº¹ç†å›¾ï¼Œå’Œå›¾ç‰‡ä¸­æ–‡å­—çš„é•¿åº¦
         numfile = numberfile;
 
        this.textureId =TextureManger.getTexture(numberfile);

@@ -1,4 +1,4 @@
-package com.jacky.engine.viewnode;
+ï»¿package com.jacky.engine.viewnode;
 
 import com.jacky.engine.input.TouchEventJ;
 
@@ -13,12 +13,12 @@ public abstract class Layer {
     public boolean isEnable = true;
 
     /**
-     * ²ã¶ÔÏóµÄ»º´æË÷Òı£¬¼ÇÂ¼²ã¶ÔÏóÖĞËùÓĞµÄ×ÓÎïÌå
+     * å±‚å¯¹è±¡çš„ç¼“å­˜ç´¢å¼•ï¼Œè®°å½•å±‚å¯¹è±¡ä¸­æ‰€æœ‰çš„å­ç‰©ä½“
      */
     public List<Node2D> r2d  = null;
 
     /**
-     * ÉèÖÃ²ã¶ÔÏó×´Ì¬ÊÇ·ñ¿ÉÓÃ
+     * è®¾ç½®å±‚å¯¹è±¡çŠ¶æ€æ˜¯å¦å¯ç”¨
      * @param eb
      */
     public void setEnable(boolean eb){
@@ -27,11 +27,11 @@ public abstract class Layer {
 
     public void update_render(){
         if(r2d==null){
-            System.out.println("µ±Ç°³¡¾°Î´Ìí¼ÓÈÎºÎ¶ÔÏó£¡£¡");
+            System.out.println("å½“å‰åœºæ™¯æœªæ·»åŠ ä»»ä½•å¯¹è±¡ï¼ï¼");
             return;
         }
         for(DrawNode dn:r2d){
-            if(dn.isEnable){//Èç¹ûµ±Ç°¶ÔÏó¿É¼û
+            if(dn.isEnable){//å¦‚æœå½“å‰å¯¹è±¡å¯è§
                 dn.update();
                 dn.draw();
             }
@@ -39,7 +39,7 @@ public abstract class Layer {
         this.update();
     }
     /**
-     * ÇåÀí²ã¶ÔÏóÖĞµÄÔªËØ
+     * æ¸…ç†å±‚å¯¹è±¡ä¸­çš„å…ƒç´ 
      */
     public void clear(){
         for(int i=0;i<r2d.size();i++){
@@ -48,34 +48,34 @@ public abstract class Layer {
     }
 
     /**
-     * ²ã¶ÔÏó³õÊ¼»¯
+     * å±‚å¯¹è±¡åˆå§‹åŒ–
      */
     public abstract void init();
     /**
-     * ²ãÃ¿Ò»Ö¡¸üĞÂ·½·¨
+     * å±‚æ¯ä¸€å¸§æ›´æ–°æ–¹æ³•
      */
     public abstract void update();
 
 
     /**
-     * µ÷ÓÃ¸Ã·½·¨½«»á´ò¿ª³¡¾°
+     * è°ƒç”¨è¯¥æ–¹æ³•å°†ä¼šæ‰“å¼€åœºæ™¯
      */
     public void openLayer(){
         this.isEnable = true;
         rescene.IsPause = true;
     }
     /**
-     * ²ã¶ÔÏó½ÓÊÜÊÂ¼ş
+     * å±‚å¯¹è±¡æ¥å—äº‹ä»¶
      * @param tej
      */
     public abstract void event(TouchEventJ tej);
     /**
-     * µ±Ç°²ã±»Ìí¼Óµ½µÄ³¡¾°ÒıÓÃ
+     * å½“å‰å±‚è¢«æ·»åŠ åˆ°çš„åœºæ™¯å¼•ç”¨
      */
     public Scene rescene = null ;
 
     /**
-     * µ±²ã±»Ìí¼Óµ½²ãÊ±×Ô¶¯µ÷ÓÃ¸Ã·½·¨
+     * å½“å±‚è¢«æ·»åŠ åˆ°å±‚æ—¶è‡ªåŠ¨è°ƒç”¨è¯¥æ–¹æ³•
      * @param s
      */
     public  void refScene(Scene s){
@@ -85,10 +85,10 @@ public abstract class Layer {
        }
     }
 
-    //²ã·µ»Ø³¡¾°Ê±´«µİ¸ø³¡¾°µÄ²ÎÊı
+    //å±‚è¿”å›åœºæ™¯æ—¶ä¼ é€’ç»™åœºæ™¯çš„å‚æ•°
     public class LayerParameter{
-       public  int  layerid;//²ã±êÊ¶
-       public  int  parameter;//²ã´«µİ¸ø³¡¾°µÄ²ÎÊı
+       public  int  layerid;//å±‚æ ‡è¯†
+       public  int  parameter;//å±‚ä¼ é€’ç»™åœºæ™¯çš„å‚æ•°
 
     }
 

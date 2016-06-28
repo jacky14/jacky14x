@@ -1,4 +1,4 @@
-package com.jacky.engine.viewnode;
+ï»¿package com.jacky.engine.viewnode;
 
 import com.jacky.engine.JxbFileManger;
 import com.jacky.engine.JxbbFileManger;
@@ -13,32 +13,32 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 
 public class Node extends   DrawNode{
-	public  int  drawVerCount;//»æÖÆ¶¨µãµÄ¸öÊı
+	public  int  drawVerCount;//ç»˜åˆ¶å®šç‚¹çš„ä¸ªæ•°
 	
 	public int vbo ;
 	public int tcbo ;
 	public int vibo ;
-	//¹Ç÷À»º´æË÷Òı
+	//éª¨éª¼ç¼“å­˜ç´¢å¼•
 	public int bonidx;
 
-	//jbxÎÄ¼şÃû³Æ
+	//jbxæ–‡ä»¶åç§°
 	public String jbxfile;
-	//jxbbÎÄ¼şÃû³Æ
+	//jxbbæ–‡ä»¶åç§°
 	public String jxbbfile;
-	public int textureId;//ÎÆÀíË÷Òı
-	public String texname;//ÎÆÀíÃû³Æ
+	public int textureId;//çº¹ç†ç´¢å¼•
+	public String texname;//çº¹ç†åç§°
 	public Matrix4f transfe ;
 	
 	public int texmode;
 	public int drawMode = -1;
 
 
-	//Ö¡»º´æ¾ØÕó
+	//å¸§ç¼“å­˜çŸ©é˜µ
 	public float [][] maxtriS;
-	//Ö¡ÁÙÊ±¾ØÕó»º´æ
+	//å¸§ä¸´æ—¶çŸ©é˜µç¼“å­˜
 	public FloatBuffer tmpBuffMax;
 	/**
-	 * ÊÇ·ñÊÇ°ëÍ¸Ã÷ÎïÌå
+	 * æ˜¯å¦æ˜¯åŠé€æ˜ç‰©ä½“
 	 */
 	public boolean isTranslucence = false;
 
@@ -136,7 +136,7 @@ public class Node extends   DrawNode{
 	}
 
 	/**
-	 * ¹Ç÷À¶¯»­Ä£ĞÍµ±Ç°ÏÔÊ¾Ö¡Ë÷Òı
+	 * éª¨éª¼åŠ¨ç”»æ¨¡å‹å½“å‰æ˜¾ç¤ºå¸§ç´¢å¼•
 	 */
 	public int frameidx = 0;
 	@Override

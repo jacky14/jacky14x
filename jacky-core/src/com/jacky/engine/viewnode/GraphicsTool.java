@@ -1,4 +1,4 @@
-package com.jacky.engine.viewnode;
+ï»¿package com.jacky.engine.viewnode;
 
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
@@ -27,13 +27,13 @@ public interface GraphicsTool {
 
 
 	/**
-	 * ¸üĞÂËùÓĞ×ÅÉ«³ÌĞòÏà»ú
+	 * æ›´æ–°æ‰€æœ‰ç€è‰²ç¨‹åºç›¸æœº
 	 * @param camera
      */
 	public void updateAllCamera(FloatBuffer camera);
 	
 	/**
-	 * ÉèÖÃÉî¶È»º³åÇøÊÇ·ñÊÇÖ»¶Á×´Ì¬ 
+	 * è®¾ç½®æ·±åº¦ç¼“å†²åŒºæ˜¯å¦æ˜¯åªè¯»çŠ¶æ€ 
 	 */
 	public void DepthMask(boolean falg);
 	
@@ -41,24 +41,24 @@ public interface GraphicsTool {
 	public void setTexMode(int  mode );
 
 	/**
-	 * ÊÇ·ñ¿ªÆô»ìºÏ
+	 * æ˜¯å¦å¼€å¯æ··åˆ
 	 */
 	public void setBlend(boolean falg);
 
 	/**
-	 * Çå¿ÕGPUÖĞÎÆÀí¶ÔÏó
+	 * æ¸…ç©ºGPUä¸­çº¹ç†å¯¹è±¡
 	 * @param index
      */
 	public void cleanTexture(int index);
 
 	/**
-	 * Çå¿ÕGPUÖĞÊı¾İ»º´æ¶ÔÏó
+	 * æ¸…ç©ºGPUä¸­æ•°æ®ç¼“å­˜å¯¹è±¡
 	 * @param index
      */
 	public void cleanBuff(int index);
 
 	/**
-	 * Ñ¡ÔñÊ¹ÓÃµÄ×ÅÉ«³ÌĞòÄ£Ê½0£ºÆÕÍ¨×ÅÉ«³ÌĞò  1£º¹Ç÷À¶¯»­×ÅÉ«³ÌĞò   2:Á£×Ó×ÅÉ«³ÌĞò
+	 * é€‰æ‹©ä½¿ç”¨çš„ç€è‰²ç¨‹åºæ¨¡å¼0ï¼šæ™®é€šç€è‰²ç¨‹åº  1ï¼šéª¨éª¼åŠ¨ç”»ç€è‰²ç¨‹åº   2:ç²’å­ç€è‰²ç¨‹åº
 	 * @param shadermode
      */
 	public void selectShader(int shadermode);

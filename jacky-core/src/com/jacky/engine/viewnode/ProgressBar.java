@@ -1,4 +1,4 @@
-package com.jacky.engine.viewnode;
+ï»¿package com.jacky.engine.viewnode;
 
 /**
  * Created by Administrator on 2016/3/21.
@@ -12,7 +12,7 @@ public class ProgressBar extends Node2D{
     public float currentjd = 1;
 
     /**
-     * ÉèÖÃ½ø¶ÈÌõµÄ½ø¶ÈÖµ1ÎªÂú½ø¶È£¬Ôİ²»Ö§³ÖÒÑ¾­½øĞĞ¹ıËõ·ÅµÄ½ø¶ÈÌõ
+     * è®¾ç½®è¿›åº¦æ¡çš„è¿›åº¦å€¼1ä¸ºæ»¡è¿›åº¦ï¼Œæš‚ä¸æ”¯æŒå·²ç»è¿›è¡Œè¿‡ç¼©æ”¾çš„è¿›åº¦æ¡
      * @param jd
      */
     public void setJD(float jd){

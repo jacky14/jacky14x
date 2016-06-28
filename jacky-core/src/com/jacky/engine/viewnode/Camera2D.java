@@ -9,7 +9,7 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 
 /**
- * Created by Administrator on 2016/3/9.
+ * Created by Administrator on 2016/3/9.中文测试
  */
 public class Camera2D {
 

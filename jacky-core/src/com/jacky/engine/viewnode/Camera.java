@@ -1,4 +1,4 @@
-package com.jacky.engine.viewnode;
+ï»¿package com.jacky.engine.viewnode;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -13,10 +13,10 @@ import com.meteor.gm.element.Map;
 
 public class Camera {
 
-	//ÉãÏñ»ú¾ØÕó  ÊÓ¾°Ìå¾ØÕó²ÎÊı 
+	//æ‘„åƒæœºçŸ©é˜µ  è§†æ™¯ä½“çŸ©é˜µå‚æ•° 
 	public float [] data ;
 	
-	//×îÖÕÉãÏñ»ú¾ØÕó
+	//æœ€ç»ˆæ‘„åƒæœºçŸ©é˜µ
 	//public  Matrix4f camera   = new Matrix4f();
 
 	/*private Matrix4f transform;
@@ -128,12 +128,12 @@ public class Camera {
 		}
 		//System.out.println("eye poist" +data[eyeX] + ","+data[eyeY]+"," + data[eyeZ]  );
 
-		//ÉèÖÃÉãÏñ»ú
+		//è®¾ç½®æ‘„åƒæœº
 		AppDelegate.share().graphicsTool.updateAllCamera(getCameraM());
 	}
 
 	/**
-	 * ¸üĞÂÏà»úµÄxyz×ø±ê
+	 * æ›´æ–°ç›¸æœºçš„xyzåæ ‡
 	 * @param x
 	 * @param y
      */
@@ -147,7 +147,7 @@ public class Camera {
 		data[centerX] =x;
 		data[centerY] =y;
 
-		//ÉèÖÃÉãÏñ»ú
+		//è®¾ç½®æ‘„åƒæœº
 		AppDelegate.share().graphicsTool.updateAllCamera(getCameraM());
 
 
@@ -155,7 +155,7 @@ public class Camera {
 	}
 
 	/**
-	 * ÉãÏñ»úĞı×ª flag²»Í¬Ğı×ª·½Ïò£¨angle ÔÚÕâÀï±»ÓÃ×÷¼ÇÂ¼µ±Ç°Ïà»úµÄĞı×ª½Ç¶È£©
+	 * æ‘„åƒæœºæ—‹è½¬ flagä¸åŒæ—‹è½¬æ–¹å‘ï¼ˆangle åœ¨è¿™é‡Œè¢«ç”¨ä½œè®°å½•å½“å‰ç›¸æœºçš„æ—‹è½¬è§’åº¦ï¼‰
 	 * @param flag
      */
 	public void role_rotate(boolean flag){
@@ -169,7 +169,7 @@ public class Camera {
 		data[eyeY] = (float) Math.cos(angle) * AppDelegate.camera_len + data[centerY];
 
 
-		//ÉèÖÃÉãÏñ»ú
+		//è®¾ç½®æ‘„åƒæœº
 		AppDelegate.share().graphicsTool.updateAllCamera(getCameraM());
 	}
 
@@ -207,10 +207,10 @@ public class Camera {
 	}
 
 
-	//¾ØÕó¼ÆËãĞı×ª90¶ÈºóÏòÁ¿
+	//çŸ©é˜µè®¡ç®—æ—‹è½¬90åº¦åå‘é‡
 	float [] xypointtmp = new float[2];
 	/**
-	 * ·µ»Øµ±Ç°Ïà»úÏòÇ°·½¹Ì¶¨¾àÀëµÄxyÔöÁ¿
+	 * è¿”å›å½“å‰ç›¸æœºå‘å‰æ–¹å›ºå®šè·ç¦»çš„xyå¢é‡
 	 * @return
      */
 	public float[] xiangqian(float jd){
@@ -246,8 +246,8 @@ public class Camera {
 		return xypointtmp;
 	}
 	
-	//data ÏÂ±êË÷Òı
-	//ÉãÏñ»ú²ÎÊı
+	//data ä¸‹æ ‡ç´¢å¼•
+	//æ‘„åƒæœºå‚æ•°
 	public final static byte eyeX = 0 ;
 	public final static byte eyeY = eyeX + 1 ;
 	public final static byte eyeZ = eyeY + 1 ;
@@ -260,7 +260,7 @@ public class Camera {
 	public final static byte upY = upX + 1 ;
 	public final static byte upZ = upY + 1 ;
 	
-	//ÊÓ¾°Ìå²ÎÊı
+	//è§†æ™¯ä½“å‚æ•°
 	public final static byte left = upZ + 1 ;
 	public final static byte right = left + 1 ;
 	
