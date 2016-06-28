@@ -55,7 +55,7 @@ public class GameStart implements Runnable{
 	
 	
 	//初始化窗口 宽度高度和窗口位置
-    private int width=850,high=480,x=100,y=100;
+    public int width=850,high=480,x=100,y=100;
     
     private Thread thread;
     private long window;
