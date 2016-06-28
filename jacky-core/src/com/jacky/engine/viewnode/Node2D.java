@@ -39,14 +39,17 @@ public class Node2D  extends   DrawNode{
     public float scale[] ;
     //旋转参数
     public float rotation ;
-    //位移参数
+    //初始位移参数
     public float point[] ;
 
     public int node_type = 0;
 
-    //位移缓存
+    //位移增量缓存
     public float tmppoint[] = new float[2];
-
+    //最终位移坐标点
+    public float finshPoint[] = new float[2];
+    
+    
     //当前缩放比例增量
     public float tmpscale[] = new float [2];
     //*2D对象变化不频繁 缓存变化矩阵
@@ -65,12 +68,24 @@ public class Node2D  extends   DrawNode{
         if(isrotation){
             transfe.rotate(rotation,0,0,1);
         }
-        transfe.matrix[12] = point[0] + tmppoint[0];
-        transfe.matrix[13] = point[1] + tmppoint[1];
+        
+        finshPoint[0] = transfe.matrix[12] = point[0] + tmppoint[0];
+        finshPoint[1] = transfe.matrix[13] = point[1] + tmppoint[1];
+        
         transfe.multiplyMM(AppDelegate.share().camera2D.orthoM);
         BufferUtil.setFloatBuffer(transfe.matrix,bianhua);
     }
-
+    public void setPoint(float x,float y){
+    	if(transfe==null){
+            transfe = new Matrix4f();
+        }else{
+            transfe.reinit();
+        }
+    	finshPoint[0] = transfe.matrix[12] = x;
+    	finshPoint[1] = transfe.matrix[13] = y;
+    	transfe.multiplyMM(AppDelegate.share().camera2D.orthoM);
+    	BufferUtil.setFloatBuffer(transfe.matrix,bianhua);
+    }
 
     public Node2D(float[] ver ,String texName){
         veridx = AppDelegate.share().graphicsTool.bindBuffer(BufferUtil.createFloatBuffer(ver));
