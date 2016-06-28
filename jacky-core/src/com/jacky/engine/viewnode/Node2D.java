@@ -117,7 +117,20 @@ public class Node2D  extends   DrawNode{
         //AppDelegate.share().graphicsTool.cleanBuff(texidx);
     }
 
-    //0，1 左上x 左上y   2,3右下x 右下y
+    
+    //节点坐标区域判断
+    public float rectpoint[];
+    public boolean isInP(float x,float y){
+    	 if(x>rectpoint[0]&&y>rectpoint[1] && x<rectpoint[2]&&y<rectpoint[3]){
+             return true;
+         }
+         return false;
+    }
+    
+    
+    
+    
+    //0，1 左上x 左上y   2,3右下x 右下y//触屏事件顶点判断，坐标原点在屏幕左上放向左x正  向下y正
     public float rect[];
     @Override
     public boolean isInRect(float x,float y){

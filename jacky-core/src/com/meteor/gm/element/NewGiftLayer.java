@@ -11,7 +11,7 @@ import com.meteor.gm.util.Const;
 import java.util.List;
 
 /**
- * Àñ°ü½çÃæ
+ * ç¤¼åŒ…ç•Œé¢
  * Created by Administrator on 2016/3/29.
  */
 public class NewGiftLayer extends Layer{
@@ -44,8 +44,8 @@ public class NewGiftLayer extends Layer{
                     return;
                 }
             }
-        }else if(tej.event== TouchEventI.PAY_CALLBACK){//Ö§¸¶»Øµ÷
-            if(tej.payid == Const.PROPINDEX_12){//Èç¹û³É¹¦¹ºÂòÁËĞÂÊÖÀñ°ü
+        }else if(tej.event== TouchEventI.PAY_CALLBACK){//æ”¯ä»˜å›è°ƒ
+            if(tej.payid == Const.PROPINDEX_12){//å¦‚æœæˆåŠŸè´­ä¹°äº†æ–°æ‰‹ç¤¼åŒ…
                 Const.buyRole(4);
                 Const.buyWeapon(6);
                 Const.addUserCoin(2888);

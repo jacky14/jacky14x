@@ -84,7 +84,10 @@ public class GenUITool {
                     tmpn2d.point[0]-kuan_half+half_design_w,half_design_h - (tmpn2d.point[1]+gao_half),
                     tmpn2d.point[0]+kuan_half+half_design_w,half_design_h - (tmpn2d.point[1]-gao_half)
             };
-
+            tmpn2d.rectpoint=new float[]{
+                    tmpn2d.point[0]-kuan_half, tmpn2d.point[1]-gao_half,
+                    tmpn2d.point[0]+kuan_half, tmpn2d.point[1]+gao_half
+            };
             if(Math.abs(tmpn2d.rotation) > 5){
                 tmpn2d.computeTran(true);
             }else{

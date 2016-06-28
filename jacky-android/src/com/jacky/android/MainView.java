@@ -68,7 +68,7 @@ public class MainView extends GLSurfaceView implements GLSurfaceView.Renderer {
 		AppDelegate.share().graphicsTool = new AndroidGraphics();//初始化本地绘图模块
 		AppDelegate.share().localFile = new LoadFile();//初始化文件加载模块
 		AppDelegate.share().userpre = new UserPreference();//初始化用户信息储存模块
-		AppDelegate.share().cp = new AndroidCorePay(this);
+		
 		AppDelegate.share().lu = new LocalUtileAndroid();
 
 
