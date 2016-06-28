@@ -9,9 +9,9 @@ import static android.opengl.GLES20.glGetUniformLocation;
  * Created by Administrator on 2016/3/15.
  */
 public class ShaderParticle extends ShaderBase{
-    public  int point_move; //Á£×ÓÎ»ÒÆ×ø±êÁĞ±íid
-    public  int _idx;//¶¥µãÎ»ÒÆ¶ÔÓ¦µÄË÷ÒıÏÂ±ê
-    public int rotatleM;//Ğı×ª¾ØÕóÒıÓÃ
+    public  int point_move; //ç²’å­ä½ç§»åæ ‡åˆ—è¡¨id
+    public  int _idx;//é¡¶ç‚¹ä½ç§»å¯¹åº”çš„ç´¢å¼•ä¸‹æ ‡
+    public int rotatleM;//æ—‹è½¬çŸ©é˜µå¼•ç”¨
     public static ShaderParticle sp;
 
     public static ShaderParticle share(){
@@ -23,7 +23,7 @@ public class ShaderParticle extends ShaderBase{
     public  void init(){
         program = create(StrSource.particle_vert, StrSource.default_frag);
         super.initBase();
-        //»ñµÃÁ£×ÓÎ»ÒÆÁĞ±íid
+        //è·å¾—ç²’å­ä½ç§»åˆ—è¡¨id
         point_move = glGetUniformLocation(program,"point_move");
         _idx = glGetAttribLocation(program,"vec_move_idx");
         rotatleM = glGetUniformLocation(program,"rotatleM");

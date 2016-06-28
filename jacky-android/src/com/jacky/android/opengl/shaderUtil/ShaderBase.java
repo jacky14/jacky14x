@@ -12,19 +12,19 @@ import static android.opengl.GLES20.*;
  */
 public class ShaderBase {
 
-    public  int MVPMatrixHandle;//×Ü±ä»»¾ØÕóÒýÓÃid
-    public  int PositionHandle; //¶¥µãÎ»ÖÃÊôÐÔÒýÓÃid
-    public  int TexCoorHandle; //¶¥µãÎÆÀí×ø±êÊôÐÔÒýÓÃid
+    public  int MVPMatrixHandle;//æ€»å˜æ¢çŸ©é˜µå¼•ç”¨id
+    public  int PositionHandle; //é¡¶ç‚¹ä½ç½®å±žæ€§å¼•ç”¨id
+    public  int TexCoorHandle; //é¡¶ç‚¹çº¹ç†åæ ‡å±žæ€§å¼•ç”¨id
     public  int program;
 
     public void initBase(){
         glUseProgram(program);
 
-        //»ñÈ¡³ÌÐòÖÐ¶¥µãÎ»ÖÃÊôÐÔÒýÓÃid
+        //èŽ·å–ç¨‹åºä¸­é¡¶ç‚¹ä½ç½®å±žæ€§å¼•ç”¨id
         PositionHandle = glGetAttribLocation(program, "point");
-        //»ñÈ¡³ÌÐòÖÐ¶¥µãÎÆÀí×ø±êÊôÐÔÒýÓÃid
+        //èŽ·å–ç¨‹åºä¸­é¡¶ç‚¹çº¹ç†åæ ‡å±žæ€§å¼•ç”¨id
         TexCoorHandle = glGetAttribLocation(program, "texture");
-        //»ñÈ¡³ÌÐòÖÐ×Ü±ä»»¾ØÕóÒýÓÃid
+        //èŽ·å–ç¨‹åºä¸­æ€»å˜æ¢çŸ©é˜µå¼•ç”¨id
         MVPMatrixHandle = glGetUniformLocation(program, "mvp_matrix");
     }
 
@@ -78,9 +78,9 @@ public class ShaderBase {
         int [] compiled=new int[1];
         glGetShaderiv(vertID, GL_COMPILE_STATUS, compiled, 0);
         if (compiled[0] == 0)
-        {//Èô±àÒëÊ§°ÜÔòÏÔÊ¾´íÎóÈÕÖ¾²¢É¾³ý´Ëshader
-            System.err.print("±àÒë¶¥µã×ÅÉ«Æ÷Ê§°Ü!");
-            System.err.print("OPENGL ES±àÒëÐÅÏ¢:" + glGetShaderInfoLog(vertID));
+        {//è‹¥ç¼–è¯‘å¤±è´¥åˆ™æ˜¾ç¤ºé”™è¯¯æ—¥å¿—å¹¶åˆ é™¤æ­¤shader
+            System.err.print("ç¼–è¯‘é¡¶ç‚¹ç€è‰²å™¨å¤±è´¥!");
+            System.err.print("OPENGL ESç¼–è¯‘ä¿¡æ¯:" + glGetShaderInfoLog(vertID));
             glDeleteShader(vertID);
             vertID = 0;
         }
@@ -93,9 +93,9 @@ public class ShaderBase {
         glCompileShader(fragID);
         glGetShaderiv(fragID, GL_COMPILE_STATUS, compiled, 0);
         if (compiled[0] == 0)
-        {//Èô±àÒëÊ§°ÜÔòÏÔÊ¾´íÎóÈÕÖ¾²¢É¾³ý´Ëshader
-            System.err.print("±àÒëÆ¬Ôª×ÅÉ«Æ÷Ê§°Ü!");
-            System.err.print("OPENGL ES±àÒëÐÅÏ¢:" + glGetShaderInfoLog(fragID));
+        {//è‹¥ç¼–è¯‘å¤±è´¥åˆ™æ˜¾ç¤ºé”™è¯¯æ—¥å¿—å¹¶åˆ é™¤æ­¤shader
+            System.err.print("ç¼–è¯‘ç‰‡å…ƒç€è‰²å™¨å¤±è´¥!");
+            System.err.print("OPENGL ESç¼–è¯‘ä¿¡æ¯:" + glGetShaderInfoLog(fragID));
             glDeleteShader(fragID);
             fragID = 0;
         }

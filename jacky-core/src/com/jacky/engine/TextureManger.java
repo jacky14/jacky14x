@@ -10,9 +10,9 @@ import java.util.HashMap;
 public class TextureManger {
 
     /**
-     * ÎÆÀí»º´æ£¬
-     * key ÎÄ¼şÃû³Æ
-     * value  size = 2   ;  0---ÎÆÀíË÷Òı  1------µ±Ç°ÎÆÀíÒıÓÃ¼ÆÊı
+     * çº¹ç†ç¼“å­˜ï¼Œ
+     * key æ–‡ä»¶åç§°
+     * value  size = 2   ;  0---çº¹ç†ç´¢å¼•  1------å½“å‰çº¹ç†å¼•ç”¨è®¡æ•°
      */
     public static HashMap<String,int[]> texturemap = new HashMap<String,int[]>();
     public static int getTexture(String texturename){
@@ -41,10 +41,10 @@ public class TextureManger {
         }
     }
     /**
-     * ÎÆÀí»º´ævalueÊı×éÏÂ±êÒâÒå
+     * çº¹ç†ç¼“å­˜valueæ•°ç»„ä¸‹æ ‡æ„ä¹‰
      */
     public static final int TEXIDINDEX = 0;
-    public static final int TEXCOUNT = TEXIDINDEX + 1;//ÎÆÀíÒıÓÃ¼ÆÊı
+    public static final int TEXCOUNT = TEXIDINDEX + 1;//çº¹ç†å¼•ç”¨è®¡æ•°
 
 
 }

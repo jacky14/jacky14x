@@ -13,8 +13,8 @@ public class AmbAnsys {
 	}
 	
 	/**
-	 * ½âÎöamb¹Ç÷À¶¯»­ÎÄ¼ş
-	 * @param ambFilePath ambÎÄ¼şÂ·¾¶
+	 * è§£æambéª¨éª¼åŠ¨ç”»æ–‡ä»¶
+	 * @param ambFilePath ambæ–‡ä»¶è·¯å¾„
 	 * @throws IOException 
 	 */
 	public static AmbBone ansysAmb(String ambFilePath) throws IOException{
@@ -34,7 +34,7 @@ public class AmbAnsys {
 		for (int i = 0; i<ab.frame_count; i++) {
 			ab.frames[i]=new Frame();
 			ab.frames[i].flag=readInt();
-			rf.skipBytes(4);//¹Ø¼üÖ¡Ë÷ÒıÖµ ¿ÉÓÃframesÏÂ±ê´úÌæ
+			rf.skipBytes(4);//å…³é”®å¸§ç´¢å¼•å€¼ å¯ç”¨framesä¸‹æ ‡ä»£æ›¿
 			ab.frames[i].vector3df=new float[3];
 			ab.frames[i].vector3df[0]=readFloat();
 			ab.frames[i].vector3df[1]=readFloat();
@@ -71,8 +71,8 @@ public class AmbAnsys {
 	}
 	
 	/**
-	 * Õâ¸öÎÄ¼şÊı¾İ°´µÍÎ»ÓÅÏÈË³Ğò´¢´æ   ÖØÓÒµ½×ó ´ú±íÓÉ¸ßÎ»µ½µÍÎ»  buff[3]-->buff[0]
-	 * (±ê×¼api RandomAccessFile.readInt() ÖĞbuff[0]-->buff[3]ÓÉ¸ßÎ»µ½µÍÎ»)
+	 * è¿™ä¸ªæ–‡ä»¶æ•°æ®æŒ‰ä½ä½ä¼˜å…ˆé¡ºåºå‚¨å­˜   é‡å³åˆ°å·¦ ä»£è¡¨ç”±é«˜ä½åˆ°ä½ä½  buff[3]-->buff[0]
+	 * (æ ‡å‡†api RandomAccessFile.readInt() ä¸­buff[0]-->buff[3]ç”±é«˜ä½åˆ°ä½ä½)
 	 * @return
 	 * @throws IOException
 	 */

@@ -22,7 +22,7 @@ public class GMBObj {
 	
 	float FaceNormal[]; // ?
 
-	//¼ÇÂ¼¾É3½ÇÐÎ¶¥µã¶ÔÓ¦µÄÐÂ¶¥µãÖµ  ¡¶¾É3½ÇÐÎ¶¥µã,ÐÂÈý½ÇÐÎ¶¥µã¡·
+	//è®°å½•æ—§3è§’å½¢é¡¶ç‚¹å¯¹åº”çš„æ–°é¡¶ç‚¹å€¼  ã€Šæ—§3è§’å½¢é¡¶ç‚¹,æ–°ä¸‰è§’å½¢é¡¶ç‚¹ã€‹
 	//public Map<Integer,Integer> newtriangle = new HashMap<Integer,Integer>();
 
 }

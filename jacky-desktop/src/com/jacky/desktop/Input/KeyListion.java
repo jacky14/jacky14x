@@ -17,7 +17,7 @@ public class KeyListion extends GLFWKeyCallback{
 	public void invoke(long window, int key, int scancode, int action, int mods){
 		// TODO Auto-generated method stub
 		//System.out.println("key = " + key + "scancode=" +scancode +"action = " + action + "mods = " +mods );
-		//action 1 按下  2 按住  3 抬起
+		//action 1 鎸変笅  2 鎸変綇  3 鎶捣
 
 		TouchEventJ tej =new TouchEventJ();
 

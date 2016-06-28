@@ -8,7 +8,7 @@ import java.io.InputStream;
  * Created by Administrator on 2016/1/3.
  */
 public class JbxBone {
-    //帧数index 整体骨骼数据
+    //甯ф暟index 鏁翠綋楠ㄩ鏁版嵁
     public  float [][] data;
 
     public JbxBone(InputStream in){

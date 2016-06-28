@@ -7,11 +7,11 @@ import java.util.HashMap;
 
 /**
  * Created by Administrator on 2016/4/20.
- * ¹ÜÀíºÏ³ÉÍ¼Æ¬µÄÀà
+ * ç®¡ç†åˆæˆå›¾ç‰‡çš„ç±»
  */
 public class MuvManger {
     /**
-     * key ¾ßÌåÍ¼Æ¬µÄkeyÖµ£¬intÊı×é    0 ¶ÔÓ¦´óÍ¼µÄÎÆÀíË÷Òı£¬1 ¶ÔÓ¦µÄuv×ø±êµÄ»º´æ¶ÔÏó
+     * key å…·ä½“å›¾ç‰‡çš„keyå€¼ï¼Œintæ•°ç»„    0 å¯¹åº”å¤§å›¾çš„çº¹ç†ç´¢å¼•ï¼Œ1 å¯¹åº”çš„uvåæ ‡çš„ç¼“å­˜å¯¹è±¡
      */
     public static HashMap<String,MuvInfo> muvs = new HashMap<String,MuvInfo>();
     public static MuvInfo getRect(String key){

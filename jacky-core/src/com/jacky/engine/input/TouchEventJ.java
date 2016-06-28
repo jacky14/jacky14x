@@ -5,21 +5,21 @@ package com.jacky.engine.input;
  */
 public class TouchEventJ {
     /**
-     * 触发该事件的唯一标识，用于区分是否是同一根手指进行的按下移动抬起
+     * 瑙﹀彂璇ヤ簨浠剁殑鍞竴鏍囪瘑锛岀敤浜庡尯鍒嗘槸鍚︽槸鍚屼竴鏍规墜鎸囪繘琛岀殑鎸変笅绉诲姩鎶捣
      */
     public int uuid;
 
     /**
-     * 事件类型，按下，移动中，抬起  ,支付回调
+     * 浜嬩欢绫诲瀷锛屾寜涓嬶紝绉诲姩涓紝鎶捣  ,鏀粯鍥炶皟
      */
     public int event;
     /**
-     * 用于标识触发该事件的目标位置
+     * 鐢ㄤ簬鏍囪瘑瑙﹀彂璇ヤ簨浠剁殑鐩爣浣嶇疆
      */
     public float tag_x;
     public float tag_y;
 
-    public int payid;//当该事件eventid 为支付回调时改属性标识购买了那个道具
+    public int payid;//褰撹浜嬩欢eventid 涓烘敮浠樺洖璋冩椂鏀瑰睘鎬ф爣璇嗚喘涔颁簡閭ｄ釜閬撳叿
 
 
 }

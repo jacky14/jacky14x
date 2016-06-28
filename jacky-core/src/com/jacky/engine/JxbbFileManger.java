@@ -12,7 +12,7 @@ import java.util.HashMap;
 public class JxbbFileManger {
 
     /**
-     * key ÎÄ¼şÃû³Æ value Ö¡¶¯»­Êı¾İ
+     * key æ–‡ä»¶åç§° value å¸§åŠ¨ç”»æ•°æ®
      */
     public static HashMap<String,JxbbInfo> jbxDataIdxmap = new HashMap<String,JxbbInfo>();
 

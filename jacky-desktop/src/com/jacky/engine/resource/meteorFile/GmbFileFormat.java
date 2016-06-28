@@ -9,7 +9,7 @@ public class GmbFileFormat {
 
 
 	String magic_version;
-	int textureCount; // 纹理个数
+	int textureCount; // 绾圭悊涓暟
 	public List<String> textureList = new ArrayList<String>();
 	int optionCount;
 	List<GHeaderOption> optionList =new ArrayList<GHeaderOption>();
@@ -77,7 +77,7 @@ public class GmbFileFormat {
 				int uvindex = i * 2;
 				
 				obj.UV[uvindex]  = bf.readFloat();
-				obj.UV[uvindex+1]  = bf.readFloat();//导出到obj
+				obj.UV[uvindex+1]  = bf.readFloat();//瀵煎嚭鍒皁bj
 
 			}
 			

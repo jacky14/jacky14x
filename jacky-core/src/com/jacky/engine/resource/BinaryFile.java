@@ -74,14 +74,14 @@ public class BinaryFile {
 	
 	
 	/**
-	 * ÊäÈëÁ÷¶ÁÈ¡
-	 * ¸÷Æ½Ì¨²âÊÔ½á¹û  win32Æ½Ì¨¸Ã·½·¨½«Êı¾İ¶ÁÈëÊı×édata1 ºÄÊ±200-300ºÁÃë £» android Æ½Ì¨ºÄÊ± 1600-3100ºÁÃë £¨Ğ¡Ã×note £¬ Ğ¡Ã×1s£©
+	 * è¾“å…¥æµè¯»å–
+	 * å„å¹³å°æµ‹è¯•ç»“æœ  win32å¹³å°è¯¥æ–¹æ³•å°†æ•°æ®è¯»å…¥æ•°ç»„data1 è€—æ—¶200-300æ¯«ç§’ ï¼› android å¹³å°è€—æ—¶ 1600-3100æ¯«ç§’ ï¼ˆå°ç±³note ï¼Œ å°ç±³1sï¼‰
 	 * @param fileIn
 	 * @throws IOException 
 	 */
 	public static void test1(InputStream fileIn) throws IOException{
 		long t1 =  System.currentTimeMillis();
-		//fileIn.available() ¸Ã·½·¨ÊÇ·ñ·µ»ØµÄÊÇÎÄ¼ş´óĞ¡£¿£¿£¿£¿£¿£¿£¿£¿ ¿ÉÄÜ´æÔÚbug
+		//fileIn.available() è¯¥æ–¹æ³•æ˜¯å¦è¿”å›çš„æ˜¯æ–‡ä»¶å¤§å°ï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿ å¯èƒ½å­˜åœ¨bug
 		int c =  fileIn.available() / 4;
 		int [] data1 = new int [c];
 		for(int i =0 ;i< c ;i++){
@@ -100,8 +100,8 @@ public class BinaryFile {
 		
 	}
 	/**
-	 * Êı×é»º´æ
-	 * ¸÷Æ½Ì¨²âÊÔ½á¹û win32Æ½Ì¨¸Ã·½·¨½«Êı¾İ¶ÁÈëÊı×édata1 ºÄÊ±0-30ºÁÃë £» android Æ½Ì¨ºÄÊ± 90-180 ºÁÃë£¨Ğ¡Ã×note £¬ Ğ¡Ã×1s£©
+	 * æ•°ç»„ç¼“å­˜
+	 * å„å¹³å°æµ‹è¯•ç»“æœ win32å¹³å°è¯¥æ–¹æ³•å°†æ•°æ®è¯»å…¥æ•°ç»„data1 è€—æ—¶0-30æ¯«ç§’ ï¼› android å¹³å°è€—æ—¶ 90-180 æ¯«ç§’ï¼ˆå°ç±³note ï¼Œ å°ç±³1sï¼‰
 	 * @param fileIn
 	 * @throws IOException 
 	 */

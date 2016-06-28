@@ -22,14 +22,14 @@ public class AndroidSound implements SoundInterface {
     private float mLeftVolume = 0.5f;
     private float mRightVolume = 0.5f;
 
-    //¶ÌÒôĞ§»º´æ
+    //çŸ­éŸ³æ•ˆç¼“å­˜
     private Map<String,Integer>  spcache = new HashMap<String,Integer>();
 
     private SoundPool soundPool = null;
 
-    //×î´óÒôÁ¿
+    //æœ€å¤§éŸ³é‡
     int maxVolume = 0;
-    //µ±Ç°ÒôÁ¿
+    //å½“å‰éŸ³é‡
     int currentVolume = 0;
 
     public void init(){
@@ -56,11 +56,11 @@ public class AndroidSound implements SoundInterface {
     @Override
     public void playsound(String soundname){
         Integer soundid = spcache.get(soundname);
-        if(soundid == null){//¼ÓÔØÉùÒôÎÄ¼ş
+        if(soundid == null){//åŠ è½½å£°éŸ³æ–‡ä»¶
             try {
                 soundid =  soundPool.load(JackyActivity.assetManager.openFd(soundname),0);
             }catch (IOException e){
-                System.err.println("¼ÓÔØÒôĞ§ÎÄ¼ş¡°"+soundname+"¡±Ê±·¢Éú´íÎó!!!");
+                System.err.println("åŠ è½½éŸ³æ•ˆæ–‡ä»¶â€œ"+soundname+"â€æ—¶å‘ç”Ÿé”™è¯¯!!!");
             }
             spcache.put(soundname,soundid);
         }else{
@@ -98,7 +98,7 @@ public class AndroidSound implements SoundInterface {
             mp.setVolume(1f,1f);
         } catch (IOException e){
             //e.printStackTrace();
-            System.err.println("¼ÓÔØ±³¾°ÒôÎÄ¼ş¡°"+path+"¡±Ê±·¢Éú´íÎó!!!");
+            System.err.println("åŠ è½½èƒŒæ™¯éŸ³æ–‡ä»¶â€œ"+path+"â€æ—¶å‘ç”Ÿé”™è¯¯!!!");
         }
         return mp;
     }

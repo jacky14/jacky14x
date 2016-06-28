@@ -5,33 +5,33 @@ package com.jacky.engine.sound;
  */
 public interface SoundInterface {
 
-    //ÖØÖÃÒôÁ¿
+    //é‡ç½®éŸ³é‡
     public void revol();
     /**
-     * ²¥·ÅÒôĞ§ÎÄ¼ş
+     * æ’­æ”¾éŸ³æ•ˆæ–‡ä»¶
      * @param soundname
      */
     void playsound(String soundname);
 
     /**
-     * ²¥·Å±³¾°ÒôÒôĞ§
+     * æ’­æ”¾èƒŒæ™¯éŸ³éŸ³æ•ˆ
      * @param musicname
      */
     void playmusic(String musicname);
 
     /**
-     * ÔİÍ£²¥·ÅÄ³¸öÒôĞ§»ò±³¾°Òô
+     * æš‚åœæ’­æ”¾æŸä¸ªéŸ³æ•ˆæˆ–èƒŒæ™¯éŸ³
      * @param name
      */
     void pause(String name);
 
     /**
-     * ¹Ø±Õ²¢ÔİÍ£ËùÓĞÒôĞ§±³¾°ÒôÎÄ¼ş
+     * å…³é—­å¹¶æš‚åœæ‰€æœ‰éŸ³æ•ˆèƒŒæ™¯éŸ³æ–‡ä»¶
      */
     void pauseall();
 
     /**
-     * ÖØĞÂÆô¶¯²¥·Å±³¾°ÒôÀÖ
+     * é‡æ–°å¯åŠ¨æ’­æ”¾èƒŒæ™¯éŸ³ä¹
      */
     void restart();
 }

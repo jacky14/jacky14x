@@ -1,7 +1,7 @@
 package com.jacky.engine.sound;
 
 /**
- * ÒôĞ§¹ÜÀíÀà
+ * éŸ³æ•ˆç®¡ç†ç±»
  * Created by Administrator on 2016/3/21.
  */
 public  class SoundManger {
@@ -12,7 +12,7 @@ public  class SoundManger {
 
     private String playmusicname ;
     /**
-     * ³õÊ¼»¯ÉùÒô½Ó¿Ú
+     * åˆå§‹åŒ–å£°éŸ³æ¥å£
      * @param sf
      */
     public  void initInterface(SoundInterface sf){
@@ -21,7 +21,7 @@ public  class SoundManger {
 
     private static SoundManger sm;
     /**
-     * »ñµÃÒôĞ§¹ÜÀíÀà
+     * è·å¾—éŸ³æ•ˆç®¡ç†ç±»
      * @return
      */
     public static SoundManger share(){
@@ -32,7 +32,7 @@ public  class SoundManger {
     }
 
     /**
-     * ²¥·ÅÒôĞ§ÎÄ¼ş
+     * æ’­æ”¾éŸ³æ•ˆæ–‡ä»¶
      * @param soundname
      */
     public void playsound(String soundname){
@@ -43,7 +43,7 @@ public  class SoundManger {
     }
 
     /**
-     * ²¥·Å±³¾°ÒôÒôĞ§
+     * æ’­æ”¾èƒŒæ™¯éŸ³éŸ³æ•ˆ
      * @param musicname
      */
     public void playmusic(String musicname){
@@ -57,7 +57,7 @@ public  class SoundManger {
     }
 
     /**
-     * ÔİÍ£²¥·ÅÄ³¸öÒôĞ§»ò±³¾°Òô
+     * æš‚åœæ’­æ”¾æŸä¸ªéŸ³æ•ˆæˆ–èƒŒæ™¯éŸ³
      * @param name
      */
     public void pause(String name){
@@ -68,7 +68,7 @@ public  class SoundManger {
     }
 
     /**
-     * ÉèÖÃÉùÒô¿ª¹Ø×´Ì¬ true ¿ªÆô  false¹Ø±Õ
+     * è®¾ç½®å£°éŸ³å¼€å…³çŠ¶æ€ true å¼€å¯  falseå…³é—­
      * @param state
      */
     public void setState(boolean state){
@@ -84,7 +84,7 @@ public  class SoundManger {
         }
     }
     /**
-     * ¹Ø±Õ²¢ÔİÍ£ËùÓĞÒôĞ§±³¾°ÒôÎÄ¼ş
+     * å…³é—­å¹¶æš‚åœæ‰€æœ‰éŸ³æ•ˆèƒŒæ™¯éŸ³æ–‡ä»¶
      */
     public void pauseall(){
         if(sf!=null){

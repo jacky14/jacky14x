@@ -3,7 +3,7 @@ package com.jacky.engine.math;
 /**
  * vector class four float 
  * @author huangbc
- * @date 	2015Äê2ÔÂ10ÈÕ ÏÂÎç2:40:38
+ * @date 	2015å¹´2æœˆ10æ—¥ ä¸‹åˆ2:40:38
  */
 public class Vector4f {
 

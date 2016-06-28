@@ -7,8 +7,8 @@ import java.nio.FloatBuffer;
 import java.util.*;
 
 enum OBJ_TYPE{
-	INDEXMODE,//¶¥µãË÷ÒıÄ£Ê½
-	DATAMODE//ÆÕÍ¨Ä£Ê½
+	INDEXMODE,//é¡¶ç‚¹ç´¢å¼•æ¨¡å¼
+	DATAMODE//æ™®é€šæ¨¡å¼
 
 };
 public class ObjFileLoder {
@@ -20,19 +20,19 @@ public class ObjFileLoder {
 
 
 
-	private ArrayList<Float> vertexlist=new ArrayList<Float>();// ±ä³¤¼¯ºÏ¼ÓÔØ¶¥µãÊı¾İ
-	private ArrayList<Float> normallist=new ArrayList<Float>();// ±ä³¤¼¯ºÏ¼ÓÔØ·¨ÏßÊı¾İ
-	private ArrayList<Float> texturelist=new ArrayList<Float>();// ±ä³¤¼¯ºÏ¼ÓÔØÎÆÀíÊı¾İ
+	private ArrayList<Float> vertexlist=new ArrayList<Float>();// å˜é•¿é›†åˆåŠ è½½é¡¶ç‚¹æ•°æ®
+	private ArrayList<Float> normallist=new ArrayList<Float>();// å˜é•¿é›†åˆåŠ è½½æ³•çº¿æ•°æ®
+	private ArrayList<Float> texturelist=new ArrayList<Float>();// å˜é•¿é›†åˆåŠ è½½çº¹ç†æ•°æ®
 
 
 
 
-	public ArrayList<Float> ivertexlist=new ArrayList<Float>();// ±ä³¤¼¯ºÏ¼ÓÔØ¶¥µãÊı¾İ ¾­¹ıË÷Òı´¦Àí
-	public ArrayList<Float> inormallist=new ArrayList<Float>();// ±ä³¤¼¯ºÏ¼ÓÔØ·¨ÏßÊı¾İ ¾­¹ıË÷Òı´¦Àí
-	public ArrayList<Float> itexturelist=new ArrayList<Float>();// ±ä³¤¼¯ºÏ¼ÓÔØÎÆÀíÊı¾İ ¾­¹ıË÷Òı´¦Àí
+	public ArrayList<Float> ivertexlist=new ArrayList<Float>();// å˜é•¿é›†åˆåŠ è½½é¡¶ç‚¹æ•°æ® ç»è¿‡ç´¢å¼•å¤„ç†
+	public ArrayList<Float> inormallist=new ArrayList<Float>();// å˜é•¿é›†åˆåŠ è½½æ³•çº¿æ•°æ® ç»è¿‡ç´¢å¼•å¤„ç†
+	public ArrayList<Float> itexturelist=new ArrayList<Float>();// å˜é•¿é›†åˆåŠ è½½çº¹ç†æ•°æ® ç»è¿‡ç´¢å¼•å¤„ç†
 
 
-	public ArrayList<Integer> Indexlist=new ArrayList<Integer>();// ±ä³¤¼¯ºÏ¼ÓÔØ¶¥µãË÷Òı
+	public ArrayList<Integer> Indexlist=new ArrayList<Integer>();// å˜é•¿é›†åˆåŠ è½½é¡¶ç‚¹ç´¢å¼•
 
 
 	public static OBJ_TYPE MODE = OBJ_TYPE.INDEXMODE;
@@ -41,7 +41,7 @@ public class ObjFileLoder {
 
 
 	
-	//public ArrayList<ModelGroups> modelGroups=new ArrayList<ModelGroups>();// Ä£ĞÍ·Ö×éĞÅÏ¢
+	//public ArrayList<ModelGroups> modelGroups=new ArrayList<ModelGroups>();// æ¨¡å‹åˆ†ç»„ä¿¡æ¯
 	public void loadStrforfname(String string) throws FileNotFoundException{
 		loadStrforInput(new FileInputStream(string));
 	}
@@ -98,7 +98,7 @@ public class ObjFileLoder {
 		Scanner sc = new Scanner(new InputStreamReader(in));
 		String[] tempsa=null;
 		String line =null;
-		int plane=0;//µ±Ç°Ä£ĞÍ×éÃæÊı
+		int plane=0;//å½“å‰æ¨¡å‹ç»„é¢æ•°
 		int count=0;
 		
 		while (sc.hasNextLine()) {
@@ -106,20 +106,20 @@ public class ObjFileLoder {
 			if (line == null || line.trim().length() < 1)
 				continue;
 			tempsa = line.split("[ ]+");
-			if ("v".equals(tempsa[0])) {// ¶¥µãÊı¾İ
+			if ("v".equals(tempsa[0])) {// é¡¶ç‚¹æ•°æ®
 				vertexlist.add(Float.parseFloat(tempsa[1]));
 				vertexlist.add(Float.parseFloat(tempsa[2]));
 				vertexlist.add(Float.parseFloat(tempsa[3]));
-				// Î´½øĞĞÊı¾İÕıÈ·ĞÔÑéÖ¤Èç¹ûÅ×Êı×éÔ½½çËµÃ÷objÎÄ¼ş´æÔÚÒì³£µÄ¶¥µãÊı¾İ
-			} else if ("vn".equals(tempsa[0])) {// ·¨ÏßÊı¾İ
+				// æœªè¿›è¡Œæ•°æ®æ­£ç¡®æ€§éªŒè¯å¦‚æœæŠ›æ•°ç»„è¶Šç•Œè¯´æ˜objæ–‡ä»¶å­˜åœ¨å¼‚å¸¸çš„é¡¶ç‚¹æ•°æ®
+			} else if ("vn".equals(tempsa[0])) {// æ³•çº¿æ•°æ®
 				normallist.add(Float.parseFloat(tempsa[1]));
 				normallist.add(Float.parseFloat(tempsa[2]));
 				normallist.add(Float.parseFloat(tempsa[3]));
-			} else if ("vt".equals(tempsa[0])) {// ÎÆÀíÊı¾İ
+			} else if ("vt".equals(tempsa[0])) {// çº¹ç†æ•°æ®
 				texturelist.add(Float.parseFloat(tempsa[1]));
 				texturelist.add(1-Float.parseFloat(tempsa[2]));
 			} else if ("f".equals(tempsa[0])) {
-				// ¶¥µãË÷Òı£¬·¨ÏßË÷Òı£¬ÎÆÀí×ø±êË÷Òı
+				// é¡¶ç‚¹ç´¢å¼•ï¼Œæ³•çº¿ç´¢å¼•ï¼Œçº¹ç†åæ ‡ç´¢å¼•
 				if(MODE ==OBJ_TYPE.INDEXMODE){
 					indexdataI(tempsa[1].split("/"));
 					indexdataI(tempsa[2].split("/"));
@@ -135,7 +135,7 @@ public class ObjFileLoder {
 				//indexdata1(tempsa[2].split("/"));
 				//indexdata1(tempsa[3].split("/"));
 
-				plane++;//ÃæÊıÔö¼Ó1
+				plane++;//é¢æ•°å¢åŠ 1
 				count++;
 			}else if("g".equals(tempsa[0])){
 				/*ModelGroups mg=new ModelGroups(tempsa[1],plane);
@@ -147,7 +147,7 @@ public class ObjFileLoder {
 				modelGroups.add(mg);*/
 			}
 		}
-		/*if(modelGroups.size()>0){//Íê³É¼ÓÔØºó×îºóÒ»¸öÄ£ĞÍ·Ö×éÉèÖÃ¶¥µã³¤¶È
+		/*if(modelGroups.size()>0){//å®ŒæˆåŠ è½½åæœ€åä¸€ä¸ªæ¨¡å‹åˆ†ç»„è®¾ç½®é¡¶ç‚¹é•¿åº¦
 			ModelGroups last=modelGroups.get(modelGroups.size()-1);
 			last.lengh=count;
 			count=0;

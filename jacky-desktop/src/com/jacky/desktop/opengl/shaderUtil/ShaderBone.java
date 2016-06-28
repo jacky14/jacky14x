@@ -11,8 +11,8 @@ import static org.lwjgl.opengl.GL20.glGetUniformLocation;
  */
 public class ShaderBone extends ShaderBase{
 
-    public  int bone_marixid; //骨骼矩阵列表id
-    public  int verBone_id;//顶点对应骨骼索引
+    public  int bone_marixid; //楠ㄩ鐭╅樀鍒楄〃id
+    public  int verBone_id;//椤剁偣瀵瑰簲楠ㄩ绱㈠紩
 
     public static ShaderBone sb;
     public static ShaderBone share(){
@@ -25,7 +25,7 @@ public class ShaderBone extends ShaderBase{
     public  void init(){
         program = create(StrSource.bone_vert, StrSource.default_frag);
         super.initBase();
-        //获得骨骼矩阵引用id
+        //鑾峰緱楠ㄩ鐭╅樀寮曠敤id
         bone_marixid = glGetUniformLocation(program,"u_matrixPalette");
 
         verBone_id = glGetAttribLocation(program,"verbone_idx");

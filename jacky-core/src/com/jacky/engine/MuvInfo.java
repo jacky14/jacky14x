@@ -2,7 +2,7 @@ package com.jacky.engine;
 
 /**
  *
- * //ºÏÍ¼ÖĞ ×ø±êĞÅÏ¢ ºÏÍ¼ÎÆÀíĞÅÏ¢
+ * //åˆå›¾ä¸­ åæ ‡ä¿¡æ¯ åˆå›¾çº¹ç†ä¿¡æ¯
  * Created by Administrator on 2016/4/20.
  */
 public class MuvInfo {

@@ -13,8 +13,8 @@ import java.util.HashMap;
 public class JxbFileManger {
 
     /**
-     * jbx ÎÄ¼ş¶ÔÓ¦ openglidË÷Òı
-     * key ÎÄ¼şÃû int[] 0 ¶¥µãid 1 ÎÆÀí×ø±êid 2 Ë÷Òıid 3 ¹Ç÷ÀË÷Òıid  4»æÖÆÈı½ÇĞÎ×ÜÊı     5 ÒıÓÃ¼ÆÊı
+     * jbx æ–‡ä»¶å¯¹åº” openglidç´¢å¼•
+     * key æ–‡ä»¶å int[] 0 é¡¶ç‚¹id 1 çº¹ç†åæ ‡id 2 ç´¢å¼•id 3 éª¨éª¼ç´¢å¼•id  4ç»˜åˆ¶ä¸‰è§’å½¢æ€»æ•°     5 å¼•ç”¨è®¡æ•°
      */
     public static HashMap<String,int[]> jbxDataIdxmap = new HashMap<String,int[]>();
 
@@ -56,5 +56,5 @@ public class JxbFileManger {
     }
 
 
-    //int[] 0 ¶¥µãid 1 ÎÆÀí×ø±êid 2 Ë÷Òıid 3 ¹Ç÷ÀË÷Òıid  4»æÖÆÈı½ÇĞÎ×ÜÊı     5 ÒıÓÃ¼ÆÊı
+    //int[] 0 é¡¶ç‚¹id 1 çº¹ç†åæ ‡id 2 ç´¢å¼•id 3 éª¨éª¼ç´¢å¼•id  4ç»˜åˆ¶ä¸‰è§’å½¢æ€»æ•°     5 å¼•ç”¨è®¡æ•°
 }

@@ -13,21 +13,21 @@ import static org.lwjgl.opengl.GL20.*;
  * Created by Administrator on 2016/3/9.
  */
 public class ShaderBase {
-    public  int program;//Ä¬ÈÏ×ÅÉ«ÓïÑÔ³ÌÐò
-    public  int MVPMatrixHandle;//×Ü±ä»»¾ØÕóÒýÓÃid
-    public  int PositionHandle; //¶¥µãÎ»ÖÃÊôÐÔÒýÓÃid
-    public  int TexCoorHandle; //¶¥µãÎÆÀí×ø±êÊôÐÔÒýÓÃid
+    public  int program;//é»˜è®¤ç€è‰²è¯­è¨€ç¨‹åº
+    public  int MVPMatrixHandle;//æ€»å˜æ¢çŸ©é˜µå¼•ç”¨id
+    public  int PositionHandle; //é¡¶ç‚¹ä½ç½®å±žæ€§å¼•ç”¨id
+    public  int TexCoorHandle; //é¡¶ç‚¹çº¹ç†åæ ‡å±žæ€§å¼•ç”¨id
 
 
     public void initBase(){
 
         glUseProgram(program);
 
-        //»ñÈ¡³ÌÐòÖÐ¶¥µãÎ»ÖÃÊôÐÔÒýÓÃid
+        //èŽ·å–ç¨‹åºä¸­é¡¶ç‚¹ä½ç½®å±žæ€§å¼•ç”¨id
         PositionHandle = glGetAttribLocation(program, "point");
-        //»ñÈ¡³ÌÐòÖÐ¶¥µãÎÆÀí×ø±êÊôÐÔÒýÓÃid
+        //èŽ·å–ç¨‹åºä¸­é¡¶ç‚¹çº¹ç†åæ ‡å±žæ€§å¼•ç”¨id
         TexCoorHandle = glGetAttribLocation(program, "texture");
-        //»ñÈ¡³ÌÐòÖÐ×Ü±ä»»¾ØÕóÒýÓÃid
+        //èŽ·å–ç¨‹åºä¸­æ€»å˜æ¢çŸ©é˜µå¼•ç”¨id
         MVPMatrixHandle = glGetUniformLocation(program, "mvp_matrix");
 
     }
