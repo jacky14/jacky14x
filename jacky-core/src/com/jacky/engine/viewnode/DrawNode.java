@@ -1,4 +1,4 @@
-package com.jacky.engine.viewnode;
+ï»¿package com.jacky.engine.viewnode;
 
 /**
  * Created by Administrator on 2015/12/9.
@@ -6,17 +6,17 @@ package com.jacky.engine.viewnode;
 public abstract class DrawNode {
 
     /**
-     * Ã¿Ò»Ö¡»æÖÆ¸Ã½ÚµãÊ±µ÷ÓÃ
+     * æ¯ä¸€å¸§ç»˜åˆ¶è¯¥èŠ‚ç‚¹æ—¶è°ƒç”¨
      */
      public abstract void draw();
 
     /**
-     * Ã¿Ò»Ö¡¸üĞÂ¸Ã½ÚµãÊ±µ÷ÓÃ
+     * æ¯ä¸€å¸§æ›´æ–°è¯¥èŠ‚ç‚¹æ—¶è°ƒç”¨
      */
     public abstract void update();
 
     /**
-     * Çå¿Õ¸Ã»æÖÆ½ÚµãÔÚgpuÖĞµÄÎÆÀí£¬¶¥µã£¬ÎÆÀí×ø±ê»º´æ
+     * æ¸…ç©ºè¯¥ç»˜åˆ¶èŠ‚ç‚¹åœ¨gpuä¸­çš„çº¹ç†ï¼Œé¡¶ç‚¹ï¼Œçº¹ç†åæ ‡ç¼“å­˜
      */
     public abstract void release();
 
@@ -28,7 +28,7 @@ public abstract class DrawNode {
         rescene = s;
     }
     /**
-     * ÅĞ¶Ï´«Èë×ø±êµãÊÇ·ñÔÚ¶ÔÏó»æÖÆÇøÓòÄÚ
+     * åˆ¤æ–­ä¼ å…¥åæ ‡ç‚¹æ˜¯å¦åœ¨å¯¹è±¡ç»˜åˆ¶åŒºåŸŸå†…
      * @param x
      * @param y
      * @return
@@ -37,13 +37,13 @@ public abstract class DrawNode {
 
     public boolean isEnable  = true;
 
-    //ÎÆÀíÍ¼äÖÈ¾·½Ê½ TEX_MODE1 Ä¬ÈÏäÖÈ¾·½Ê½GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA£¬Ò»°ãÆÕ±éäÖÈ¾·½Ê½£¬
-    //				 TEX_MODE2 GL_ONE,GL_ONE  Ò»°ãÓÃÓÚäÖÈ¾¸ßÁÁ¹âĞ§Í¼
+    //çº¹ç†å›¾æ¸²æŸ“æ–¹å¼ TEX_MODE1 é»˜è®¤æ¸²æŸ“æ–¹å¼GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHAï¼Œä¸€èˆ¬æ™®éæ¸²æŸ“æ–¹å¼ï¼Œ
+    //				 TEX_MODE2 GL_ONE,GL_ONE  ä¸€èˆ¬ç”¨äºæ¸²æŸ“é«˜äº®å…‰æ•ˆå›¾
     public static  int TEX_MODE1 = 0;
     public static  int TEX_MODE2 = TEX_MODE1 + 1;
 
     public static int ARRAY_MODE = 0;
     public static int ELEMENT_MODE = ARRAY_MODE + 1;
-    //Ë÷Òı¹Ç÷ÀÄ£ĞÍ
+    //ç´¢å¼•éª¨éª¼æ¨¡å‹
     public static int ELEMENT_BONE_MODE = ELEMENT_MODE+ 1;
 }
