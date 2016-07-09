@@ -1,4 +1,4 @@
-﻿package com.jacky.start;
+package com.jacky.start;
 
 import com.jacky.engine.local.LocalUtile;
 import com.jacky.engine.pay.CorePay;

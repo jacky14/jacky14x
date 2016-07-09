@@ -1,4 +1,4 @@
-﻿package com.jacky.engine.viewnode;
+package com.jacky.engine.viewnode;
 
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;

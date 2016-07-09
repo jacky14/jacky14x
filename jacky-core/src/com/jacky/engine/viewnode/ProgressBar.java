@@ -1,4 +1,4 @@
-﻿package com.jacky.engine.viewnode;
+package com.jacky.engine.viewnode;
 
 /**
  * Created by Administrator on 2016/3/21.

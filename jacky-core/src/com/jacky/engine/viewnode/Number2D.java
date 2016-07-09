@@ -1,4 +1,4 @@
-﻿package com.jacky.engine.viewnode;
+package com.jacky.engine.viewnode;
 
 import com.jacky.engine.TextureManger;
 import com.jacky.engine.buffer.BufferUtil;
