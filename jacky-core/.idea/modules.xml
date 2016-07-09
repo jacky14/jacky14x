@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../jacky-android/jacky-android.iml" filepath="$PROJECT_DIR$/../jacky-android/jacky-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jacky-core.iml" filepath="$PROJECT_DIR$/jacky-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../jacky-desktop/jacky-desktop.iml" filepath="$PROJECT_DIR$/../jacky-desktop/jacky-desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../jacky-game-android/jacky-game-android.iml" filepath="$PROJECT_DIR$/../jacky-game-android/jacky-game-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../jacky-game-core/jacky-game-core.iml" filepath="$PROJECT_DIR$/../jacky-game-core/jacky-game-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../jacky-game-desktop/jacky-game-desktop.iml" filepath="$PROJECT_DIR$/../jacky-game-desktop/jacky-game-desktop.iml" />
+    </modules>
+  </component>
+</project>
