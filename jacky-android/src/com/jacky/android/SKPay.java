@@ -4,7 +4,7 @@ import android.content.Context;
 import android.widget.Toast;
 import com.jacky.android.util.AndroidCorePay;
 import com.jacky.start.AppDelegate;
-import com.meteor.gm.util.Const;
+
 
 
 /**
