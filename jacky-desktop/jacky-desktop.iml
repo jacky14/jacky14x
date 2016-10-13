@@ -2,6 +2,7 @@
 <module type="JAVA_MODULE" version="4">
   <component name="EclipseModuleManager">
     <libelement value="file://libs/jar/lwjgl.jar" />
+    <libelement value="jar://$MODULE_DIR$/libs/jar/lwjgl.jar!/" />
     <src_description expected_position="0">
       <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
     </src_description>
@@ -14,7 +15,20 @@
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="jacky-core" />
-    <orderEntry type="library" name="lwjgl" level="project" />
+    <orderEntry type="module-library">
+      <library name="lwjgl.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/jar/lwjgl.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <NATIVE>
+          <root url="file://jacky-desktop/libs/native" />
+        </NATIVE>
+        <SOURCES>
+          <root url="file://libs/src.zip" />
+        </SOURCES>
+      </library>
+    </orderEntry>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="module-library">
       <library>

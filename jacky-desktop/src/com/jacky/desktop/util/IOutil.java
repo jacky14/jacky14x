@@ -8,7 +8,9 @@ import com.jacky.engine.resource.LocalFile;
 
 public class IOutil implements LocalFile{
 
-	public static final String ROOT_PATH = "assets/";
+	//public static final String ROOT_PATH = "assets/";//ecplise 编辑器
+
+	public static final String ROOT_PATH = "../jacky-game-desktop/assets/";//intelJ  编辑器
 	public static String getAssetsName(String filepath){
 		return ROOT_PATH + filepath;
 	}

@@ -1,13 +1,13 @@
--optimizationpasses 5                           ##è®¾ç½®æ··æ·†çš„å‹ç¼©æ¯”ç‡ 0 ~ 7
+-optimizationpasses 5                           ##ÉèÖÃ»ìÏıµÄÑ¹Ëõ±ÈÂÊ 0 ~ 7
 -dontusemixedcaseclassnames                     ## Aa aA
--dontskipnonpubliclibraryclasses               ##å¦‚æœåº”ç”¨ç¨‹åºå¼•å…¥çš„æœ‰jaråŒ…,å¹¶ä¸”æƒ³æ··æ·†jaråŒ…é‡Œé¢çš„class
+-dontskipnonpubliclibraryclasses               ##Èç¹ûÓ¦ÓÃ³ÌĞòÒıÈëµÄÓĞjar°ü,²¢ÇÒÏë»ìÏıjar°üÀïÃæµÄclass
 -dontpreverify        
--verbose                                       ##æ··æ·†åç”Ÿäº§æ˜ å°„æ–‡ä»¶ map ç±»å->è½¬åŒ–åç±»åçš„æ˜ å°„
+-verbose                                       ##»ìÏıºóÉú²úÓ³ÉäÎÄ¼ş map ÀàÃû->×ª»¯ºóÀàÃûµÄÓ³Éä
 -ignorewarnings
 
--optimizations !code/simplification/arithmetic,!field/*,!class/merging/*       ##æ··æ·†é‡‡ç”¨çš„ç®—æ³•.
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*       ##»ìÏı²ÉÓÃµÄËã·¨.
 
--keep public class * extends android.app.Activity                        ##æ‰€æœ‰activityçš„å­ç±»ä¸è¦å»æ··æ·†
+-keep public class * extends android.app.Activity                        ##ËùÓĞactivityµÄ×ÓÀà²»ÒªÈ¥»ìÏı
 -keep public class * extends android.app.Application
 -keep public class * extends android.app.Service
 -keep public class * extends android.content.BroadcastReceiver
@@ -23,12 +23,12 @@
 
 
 
--keepclasseswithmembernames class * {            ## æ‰€æœ‰nativeçš„æ–¹æ³•ä¸èƒ½å»æ··æ·†.
+-keepclasseswithmembernames class * {            ## ËùÓĞnativeµÄ·½·¨²»ÄÜÈ¥»ìÏı.
     native <methods>;
 }
 
 -keepclasseswithmembers class * {
-    public <init>(android.content.Context, android.util.AttributeSet);             ##æŸäº›æ„é€ æ–¹æ³•ä¸èƒ½å»æ··æ·†
+    public <init>(android.content.Context, android.util.AttributeSet);             ##Ä³Ğ©¹¹Ôì·½·¨²»ÄÜÈ¥»ìÏı
 }
 
 -keepclasseswithmembers class * {
@@ -38,12 +38,12 @@
 -keepclassmembers class * extends android.app.Activity {
    public void *(android.view.View);
 }
--keepclassmembers enum * {                                 ## æšä¸¾ç±»ä¸èƒ½å»æ··æ·†
+-keepclassmembers enum * {                                 ## Ã¶¾ÙÀà²»ÄÜÈ¥»ìÏı
     public static **[] values();
     public static ** valueOf(java.lang.String);
 }
 
--keep class * implements android.os.Parcelable {               ## aidlæ–‡ä»¶ä¸èƒ½å»æ··æ·†.
+-keep class * implements android.os.Parcelable {               ## aidlÎÄ¼ş²»ÄÜÈ¥»ìÏı.
   public static final android.os.Parcelable$Creator *;
 }
 
