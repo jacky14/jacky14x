@@ -76,18 +76,21 @@ public class JackyActivity extends Activity {
 	@Override
     protected void onResume (){
         super.onResume();
+        mainView.onResume();
         AppDelegate.share().applicationWillEnterForeground();
     }
      
     @Override
     protected void onPause (){
         super.onPause();
+        mainView.onPause();
 		AppDelegate.share().applicationDidEnterBackground();
     }
 
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
+        
 		//PayConnect.getInstance(this).close();
 		System.exit(0);
 	}

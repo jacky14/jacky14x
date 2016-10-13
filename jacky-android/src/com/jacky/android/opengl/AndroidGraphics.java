@@ -35,6 +35,9 @@ public class AndroidGraphics implements GraphicsTool{
 		glEnableVertexAttribArray(Shader.share().TexCoorHandle);
 		
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vibo);
+
+
+		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, textureId);
 	     //绘制三角形
 		glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_SHORT, 0);
@@ -61,7 +64,7 @@ public class AndroidGraphics implements GraphicsTool{
 		//传递当前帧骨骼动画列表
 		glUniform4fv(ShaderBone.share().bone_marixid,martixs.remaining() >> 2,martixs);
 		//glUniform4(ShaderBone.share().bone_marixid,martixs);
-
+		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, textureId);
 		//绘制三角形
 		glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_SHORT, 0);
@@ -97,6 +100,7 @@ public class AndroidGraphics implements GraphicsTool{
 
 
 		//绑定纹理
+		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, textureId);
 
 		glDrawArrays(GL_TRIANGLES, 0, count);
