@@ -69,9 +69,6 @@ public class JackyActivity extends Activity {
 		//PayConnect.getInstance("da984f87ea2ed60ac90c00e560bdd4ca", "shenhe", this);
 
 
-		
-
-
 	}
 
 
