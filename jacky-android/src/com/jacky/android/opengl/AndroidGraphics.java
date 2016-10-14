@@ -227,9 +227,9 @@ public class AndroidGraphics implements GraphicsTool{
 		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,GL_NEAREST);
 		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER,GL_LINEAR);
 
-
-		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S,GL_REPEAT);
-		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T,GL_REPEAT);
+                //   部分手机居然不支持GL_REPEAT，蛋疼部分手机就是小米3 GL_REPEAT 黑屏     GL_CLAMP_TO_EDGE  模式才能正常显示
+		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S,GL_CLAMP_TO_EDGE);
+		glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T,GL_CLAMP_TO_EDGE);
 		//实际加载纹理
         GLUtils.texImage2D
         (
