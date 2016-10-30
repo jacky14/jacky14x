@@ -76,14 +76,14 @@ public class JackyActivity extends Activity {
 	@Override
     protected void onResume (){
         super.onResume();
-        mainView.onResume();
+        //mainView.onResume();
         AppDelegate.share().applicationWillEnterForeground();
     }
      
     @Override
     protected void onPause (){
         super.onPause();
-        mainView.onPause();
+        //mainView.onPause();
 		AppDelegate.share().applicationDidEnterBackground();
     }
 
