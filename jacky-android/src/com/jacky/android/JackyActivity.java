@@ -54,6 +54,13 @@ public class JackyActivity extends Activity {
         //
      	//setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
      	//setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
+		if(mainView!=null){
+			//防止后台后 点击桌面icon 后依然走oncreat 这里直接重启！！！！！
+			onDestroy();
+		}
+
      	assetManager = getAssets();
 		jackyActivity = this;
 		mainView = new MainView(this);
