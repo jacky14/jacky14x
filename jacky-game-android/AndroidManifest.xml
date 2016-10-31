@@ -16,6 +16,7 @@
             android:name="com.example.jacky_game_android.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="landscape"
+            android:launchMode="singleInstance"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -12,7 +12,6 @@ public class MainActivity extends JackyActivity {
     protected void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
         StartApp.setFirstScene();
-        setContentView(mainView);
     }
 
     @Override

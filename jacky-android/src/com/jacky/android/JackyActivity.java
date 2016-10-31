@@ -64,9 +64,7 @@ public class JackyActivity extends Activity {
      	assetManager = getAssets();
 		jackyActivity = this;
 		mainView = new MainView(this);
-
-
-
+		setContentView(mainView);
 
 
 		sk = new SKPay();
