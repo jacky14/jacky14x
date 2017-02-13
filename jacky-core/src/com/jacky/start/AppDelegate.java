@@ -68,6 +68,7 @@ public class AppDelegate {
 		farme ++;
 		if(System.currentTimeMillis() - sec > 1000){
 			//统计fps（每秒钟绘制帧数）
+			//lu.showMsg("fps:" + farme);
 			System.out.println("fps:" + farme);
 			//showfps = true;
 			//tmpfpsnum = farme;

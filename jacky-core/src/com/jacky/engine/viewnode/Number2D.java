@@ -46,9 +46,12 @@ public class Number2D extends Node2D{
     public void release() {
         super.release();
         TextureManger.clearTex(numfile);
-        for(int i=0;i<tcids.length;i++){
-            AppDelegate.share().graphicsTool.cleanBuff(tcids[i]);
+        if(tcids!=null&&tcids.length>0){
+            for(int i=0;i<tcids.length;i++){
+                AppDelegate.share().graphicsTool.cleanBuff(tcids[i]);
+            }
         }
+
 
     }
     /*public static float[] texarr= new float[]{
