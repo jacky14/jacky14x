@@ -14,7 +14,7 @@ import java.nio.FloatBuffer;
 
 public class Node extends   DrawNode{
 	public  int  drawVerCount;//绘制定点的个数
-	
+
 	public int vbo ;
 	public int tcbo ;
 	public int vibo ;
@@ -28,7 +28,7 @@ public class Node extends   DrawNode{
 	public int textureId;//纹理索引
 	public String texname;//纹理名称
 	public Matrix4f transfe ;
-	
+
 	public int texmode;
 	public int drawMode = -1;
 
@@ -56,7 +56,7 @@ public class Node extends   DrawNode{
 		}
 		transfe.scaleM(x, y, z);
 	}
-	
+
 	public void translate(float x,float y,float z){
 		if(transfe == null){
 			transfe = new Matrix4f();
@@ -185,11 +185,39 @@ public class Node extends   DrawNode{
 			FloatBuffer allT = AppDelegate.share().camera.getCameraM();
 			AppDelegate.share().graphicsTool.setCamera(allT);
 		}
-		
+
+	}
+
+	private Node bonechile;
+	private int idx;
+	Matrix4f weaponMatrix =new Matrix4f();
+	/**
+	 * 添加节点到指定的子骨骼上
+	 */
+	public void addBoneChile(int index,Node child){
+		if(drawMode != ELEMENT_BONE_MODE){
+			System.out.println("异常，不包含骨骼！！");
+			return;
+		}
+		this.bonechile = child;
+		this.idx = index*12;
+		this.rescene.addChile(child);
 	}
 
 	@Override
 	public void update(){
+		if(bonechile!=null){
+			weaponMatrix.reinit();
+			weaponMatrix.matrix[0]  = maxtriS[frameidx][idx+0];   weaponMatrix.matrix[1]  = maxtriS[frameidx][idx+4];   weaponMatrix.matrix[2]  = maxtriS[frameidx][idx+8];
+			weaponMatrix.matrix[4]  = maxtriS[frameidx][idx+1];   weaponMatrix.matrix[5]  = maxtriS[frameidx][idx+5];   weaponMatrix.matrix[6]  = maxtriS[frameidx][idx+9];
+			weaponMatrix.matrix[8]  = maxtriS[frameidx][idx+2];   weaponMatrix.matrix[9]  = maxtriS[frameidx][idx+6];   weaponMatrix.matrix[10] = maxtriS[frameidx][idx+10];
+			weaponMatrix.matrix[12] = maxtriS[frameidx][idx+3];   weaponMatrix.matrix[13] = maxtriS[frameidx][idx+7];   weaponMatrix.matrix[14] = maxtriS[frameidx][idx+11];
+			if(this.transfe!=null){
+				weaponMatrix.multiplyMM(this.transfe);
+			}
+			bonechile.transfe = weaponMatrix;
+
+		}
 
 	}
 
@@ -201,12 +229,6 @@ public class Node extends   DrawNode{
 			JxbbFileManger.clear(jxbbfile);
 		}
 	}
-
-
-
-
-
-
 
 
 	@Override
