@@ -105,7 +105,7 @@ public class GameStart implements Runnable{
 		// the window. The last 2 NULL parameters are for more advanced uses and you
 		// shouldn't worry about them right now. （这句话太TM长了我快编不下去了），我们需要设置
 		// 窗口的宽度和高度和标题，这两个NULL是关于更高级的一些设置，你现在不用担心不理解他们
-		window = glfwCreateWindow(width, high, "By jacky.2015-08-19", NULL, NULL);
+		window = glfwCreateWindow(width, high, "By jacky.2017-02-13", NULL, NULL);
 		 
 		 
 		 
