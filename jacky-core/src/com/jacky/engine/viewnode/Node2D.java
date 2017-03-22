@@ -81,6 +81,7 @@ public class Node2D  extends   DrawNode{
         }else{
             transfe.reinit();
         }
+
     	finshPoint[0] = transfe.matrix[12] = x;
     	finshPoint[1] = transfe.matrix[13] = y;
     	transfe.multiplyMM(AppDelegate.share().camera2D.orthoM);

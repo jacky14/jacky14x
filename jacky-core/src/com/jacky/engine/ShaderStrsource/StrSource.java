@@ -42,7 +42,7 @@ public class StrSource {
             "uniform mat4 mvp_matrix;\n" +
             "varying vec2 shareCoordinate;\n" +
             "attribute float verbone_idx;\n" +
-            "uniform vec4 u_matrixPalette[120];\n" +
+            "uniform vec4 u_matrixPalette[135];\n" +
             "vec4 getPosition(){\n" +
             "    int index = int(verbone_idx) * 3;\n" +
             "    vec4 _skinnedPosition;\n" +

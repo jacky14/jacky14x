@@ -29,6 +29,9 @@ public class AppDelegate {
 	//展示窗口的宽度和高度
 	public  int view_width=0,view_high=0;
 
+	public int half_vwidth = -1,half_vhigh = -1;
+
+
 	public GraphicsTool graphicsTool;
 
 	public LocalFile localFile;
@@ -113,6 +116,20 @@ public class AppDelegate {
 			currentScreen.init();
 		}
 		
+	}
+
+	//获得屏幕一半高度宽度
+	public final int getHV(){
+		if(half_vwidth==-1){
+			half_vwidth = (int)(view_width*0.5f);
+		}
+		return half_vwidth;
+	}
+	public final int getHH(){
+		if(half_vhigh==-1){
+			half_vhigh = (int)(view_high*0.5f);
+		}
+		return half_vhigh;
 	}
 
 	//程序结束时清理工作
