@@ -5,24 +5,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-
 import lib.net.util.DES;
 
 
 public class HttpUtil {
 public static void getUrl(final String url,final NetCall nc){
 		
-		new Thread(new Runnable() {
+		new Thread(new Runnable() {//android 19level 以下的网络访问方法
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
 			
-				System.out.println("加载的url是：>>>>>>>>>>>>>>>>>>>>>>"+url );
+				/*System.out.println("加载的url是：>>>>>>>>>>>>>>>>>>>>>>"+url );
 		        HttpGet httpGet = new HttpGet(url);
 		       
 		        HttpClient httpClient = new DefaultHttpClient();
@@ -76,7 +70,7 @@ public static void getUrl(final String url,final NetCall nc){
 		        	nc.geturlcall("service error");
 		        } else {
 		        	nc.geturlcall(DES.share().decode(result));
-		        }
+		        }*/
 		        
 			}
 		}).start();

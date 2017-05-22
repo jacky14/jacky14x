@@ -119,15 +119,15 @@ public class AppDelegate {
 	}
 
 	//获得屏幕一半高度宽度
-	public final int getHV(){
+	public final int getHW(){
 		if(half_vwidth==-1){
-			half_vwidth = (int)(view_width*0.5f);
+			half_vwidth = (int)(design_width*0.5f);
 		}
 		return half_vwidth;
 	}
 	public final int getHH(){
 		if(half_vhigh==-1){
-			half_vhigh = (int)(view_high*0.5f);
+			half_vhigh = (int)(design_high*0.5f);
 		}
 		return half_vhigh;
 	}
